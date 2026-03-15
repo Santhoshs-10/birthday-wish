@@ -56,12 +56,38 @@ window.addEventListener('load', () => tryAutoplay());
 function updateCountdown() {
   const now = new Date();
   let target = new Date(CONFIG.birthdayDate);
-  if (now >= target) { target.setFullYear(target.getFullYear() + 1); }
+  
+  // If the birthday date is in the past, move to next year
+  // But ONLY if it's not currently the birthday day!
+  // We check if 'now' is later than the end of the birthday day.
+  const endOfBirthday = new Date(target);
+  endOfBirthday.setHours(23, 59, 59, 999);
+  
+  if (now > endOfBirthday) {
+    target.setFullYear(target.getFullYear() + 1);
+  }
+
   const diff = target - now;
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+  
+  // If it's currently the birthday (now is between target and endOfBirthday)
+  if (now >= target && now <= endOfBirthday) {
+    // Birthday is active! We can show all zeros or a special message
+    const setZero = (id) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = '00';
+    };
+    setZero('cd-days');
+    setZero('cd-hours');
+    setZero('cd-mins');
+    setZero('cd-secs');
+    return;
+  }
+
+  // Otherwise, standard countdown math
+  const days = Math.max(0, Math.floor(diff / (1000 * 60 * 60 * 24)));
+  const hours = Math.max(0, Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+  const mins = Math.max(0, Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
+  const secs = Math.max(0, Math.floor((diff % (1000 * 60)) / 1000));
 
   const setVal = (id, val) => {
     const el = document.getElementById(id);
