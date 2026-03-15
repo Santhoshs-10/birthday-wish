@@ -10,6 +10,7 @@
 const CONFIG = {
   // Set the birthday date/time (YYYY, MM-1, DD, HH, MM, SS)
   birthdayDate: new Date(2026, 2, 16, 0, 0, 0), // March 16, 2026
+  
 
   // Birthday message to type
   birthdayMessage: `Happy Birthday! 🎉\n\nYou are the most special person in my life.\nEvery moment with you is a beautiful memory.\n\nMay your day be filled with happiness, love,\nand all the things that make you smile.\n\nYou deserve every joy in this world. ❤️🌸`,
