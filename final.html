@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday! 🎉✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ======= AUDIO ======= -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" title="Toggle Music">🎵</button>
+
+  <section id="final-section" style="display: flex !important; min-height: 100vh; align-items: center; justify-content: center;">
+    <canvas id="fireworks-canvas"></canvas>
+    <div class="final-content">
+      <div class="final-emoji">🎂</div>
+      <h2 class="final-title">Once Again,<br />Happy Birthday! 🎉</h2>
+      <p class="final-msg">I hope this little surprise made you smile.<br />You deserve every bit of happiness in this world. ❤️</p>
+      <div class="final-icons">🎊 🌸 🎈 💖 ✨ 🎀 🌟 🥂</div>
+      <button class="action-btn gold" onclick="restartExperience()">🔄 Relive the Magic</button>
+    </div>
+  </section>
+
+  <script src="common.js"></script>
+  <script src="final.js"></script>
+</body>
+</html>

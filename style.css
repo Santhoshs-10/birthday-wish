@@ -12,12 +12,7 @@ body {
   color: #fff;
   overflow-x: hidden;
 }
-html.locked, body.locked {
-  overflow: hidden !important;
-  height: 100vh !important;
-  width: 100% !important;
-  position: fixed !important;
-}
+/* Removed locked class as we are now multi-page */
 
 /* ---- SCROLLBAR ---- */
 ::-webkit-scrollbar { width: 6px; }
@@ -204,21 +199,19 @@ html.locked, body.locked {
 .scroll-btn.pink { opacity: 1; animation: none; background: linear-gradient(135deg, #ff5e9b, #a855f7); }
 .scroll-btn.gold { background: linear-gradient(135deg, #ffd700, #ff9d00); color: #2a0040; box-shadow: 0 6px 30px rgba(255,200,0,0.5); }
 
-/* Locked state for surprise sections */
-.surprise-section {
-  display: none !important;
-}
-.unlocked .surprise-section {
-  display: block !important;
-}
+/* Gating classes removed for multi-page refactor */
 
 /* ============================================
    COMMON SECTION STYLES
    ============================================ */
 section {
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-header {

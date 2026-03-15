@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Message From the Heart 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ======= AUDIO ======= -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" title="Toggle Music">🎵</button>
+
+  <section id="message-section" style="display: flex !important; min-height: 100vh; align-items: center; justify-content: center;">
+    <div class="floating-hearts" id="floating-hearts"></div>
+    <div class="message-card glass">
+      <div class="msg-top-deco">💌</div>
+      <h2 class="msg-title">A Message From the Heart</h2>
+      <div id="typed-message" class="typed-message"></div>
+      <div class="msg-signature">— With all my love 💕</div>
+      <a href="letter.html" id="next-btn" class="scroll-btn pink hidden" style="margin-top: 2rem;">Read Your Letter 📜</a>
+    </div>
+  </section>
+
+  <script src="common.js"></script>
+  <script src="message.js"></script>
+</body>
+</html>

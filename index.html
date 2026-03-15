@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="locked">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="locked">
+<body>
 
   <!-- ======= AUDIO ======= -->
   <audio id="bg-music" loop>
@@ -37,156 +37,17 @@
           <div class="time-block"><span id="cd-secs">00</span><label>Secs</label></div>
         </div>
       </div>
-      <a href="#gift-section" id="open-surprise-btn" class="scroll-btn animate-in hidden">Open Your Surprise 🎁</a>
+      <a href="gift.html" id="open-surprise-btn" class="scroll-btn animate-in hidden">Open Your Surprise 🎁</a>
     </div>
     <div class="floating-emojis">
       <span>🎂</span><span>🎈</span><span>🌸</span><span>✨</span><span>🎊</span><span>💖</span><span>🎀</span><span>🌟</span>
     </div>
   </section>
 
-  <!-- ======= SECTION 2: GIFT BOX ======= -->
-  <section id="gift-section" class="surprise-section">
-    <div class="section-header">
-      <h2>Your Special Gift 🎁</h2>
-      <p>Click the gift box to open your surprise!</p>
-    </div>
-    <div id="gift-box-container">
-      <div id="gift-box" class="gift-box" onclick="openGift()">
-        <div class="gift-lid">
-          <div class="gift-ribbon-h"></div>
-          <div class="gift-ribbon-v"></div>
-          <div class="gift-bow">
-            <div class="bow-left"></div>
-            <div class="bow-right"></div>
-            <div class="bow-center"></div>
-          </div>
-        </div>
-        <div class="gift-body">
-          <div class="gift-ribbon-h body-ribbon"></div>
-        </div>
-        <div class="gift-sparkles" id="gift-sparkles"></div>
-      </div>
-      <p class="click-hint" id="click-hint">👆 Click to Open!</p>
-      <div id="gift-message" class="gift-message hidden">
-        <div class="gift-msg-inner">
-          <div class="gift-msg-emoji">🎉</div>
-          <h3>You're My Everything!</h3>
-          <p>This gift is wrapped with all the love and warmth I feel for you every single day. You deserve the world
-            and more. Happy Birthday, my dearest! 💖</p>
-        </div>
-      </div>
-    </div>
-    <a href="#cake-section" class="scroll-btn pink">Next Surprise 🎂</a>
-  </section>
-
-  <!-- ======= SECTION 3: CAKE ======= -->
-  <section id="cake-section" class="surprise-section">
-    <div class="section-header">
-      <h2>Make a Wish! 🕯️</h2>
-      <p>Blow out the candles and make your birthday wish come true!</p>
-    </div>
-    <div id="cake-container">
-      <div id="cake" class="cake">
-        <!-- Candles -->
-        <div class="candles-row" id="candles-row">
-          <div class="candle">
-            <div class="flame" id="f1"></div>
-          </div>
-          <div class="candle">
-            <div class="flame" id="f2"></div>
-          </div>
-          <div class="candle">
-            <div class="flame" id="f3"></div>
-          </div>
-          <div class="candle">
-            <div class="flame" id="f4"></div>
-          </div>
-          <div class="candle">
-            <div class="flame" id="f5"></div>
-          </div>
-        </div>
-        <!-- Cake layers -->
-        <div class="cake-top">
-          <div class="cake-deco">🌸 Happy Birthday 🌸</div>
-        </div>
-        <div class="cake-middle"></div>
-        <div class="cake-bottom"></div>
-        <div class="cake-plate"></div>
-        <!-- Cut line -->
-        <div class="cut-line" id="cut-line"></div>
-      </div>
-      <div id="cake-smoke" class="cake-smoke hidden"></div>
-    </div>
-    <div class="cake-btns">
-      <button id="blow-btn" class="action-btn" onclick="blowCandles()">💨 Blow the Candles</button>
-      <button id="cut-btn" class="action-btn hidden" onclick="cutCake()">🔪 Cut the Cake</button>
-    </div>
-    <canvas id="cake-confetti" class="confetti-overlay hidden"></canvas>
-    <a href="#message-section" class="scroll-btn pink hidden" id="next-msg-btn">Read Your Message 💌</a>
-  </section>
-
-  <!-- ======= SECTION 4: TYPING MESSAGE ======= -->
-  <section id="message-section" class="surprise-section">
-    <div class="floating-hearts" id="floating-hearts"></div>
-    <div class="message-card glass">
-      <div class="msg-top-deco">💌</div>
-      <h2 class="msg-title">A Message From the Heart</h2>
-      <div id="typed-message" class="typed-message"></div>
-      <div class="msg-signature">— With all my love 💕</div>
-    </div>
-  </section>
-
-  <!-- ======= SECTION 5: LOVE LETTER ======= -->
-  <section id="letter-section" class="surprise-section">
-    <div class="floating-hearts" id="letter-hearts"></div>
-    <div class="letter-wrapper">
-      <div class="letter-card glass" id="letter-card">
-        <div class="letter-header">
-          <span class="letter-stamp">💌</span>
-          <h3>A Letter For You</h3>
-        </div>
-        <div class="letter-body">
-          <p class="letter-greeting">My Dearest,</p>
-          <p>
-            On this special day, I want you to know how incredibly grateful I am to have you in my life.
-            You light up every room you walk into, and your smile makes the whole world brighter. 🌟
-          </p>
-          <p>
-            Every laugh we've shared, every memory we've made — I treasure them all in the deepest corner of my heart.
-            You are my sunshine on cloudy days and my calm in every storm. 🌈
-          </p>
-          <p>
-            May this birthday bring you everything your heart desires — may you be surrounded by love, warmth, and
-            endless happiness.
-            I am so lucky to call you mine. 💖
-          </p>
-          <p>
-            Here's to many more beautiful years ahead. I'll be right by your side through all of them. 🎂✨
-          </p>
-          <p class="letter-closing">Forever Yours,<br /><em>Santhosh 💕</em></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= SECTION 8: FINAL CELEBRATION ======= -->
-  <section id="final-section" class="surprise-section">
-    <canvas id="fireworks-canvas"></canvas>
-    <div class="final-content">
-      <div class="final-emoji">🎂</div>
-      <h2 class="final-title">Once Again,<br />Happy Birthday! 🎉</h2>
-      <p class="final-msg">I hope this little surprise made you smile.<br />You deserve every bit of happiness in this
-        world. ❤️</p>
-      <div class="final-icons">🎊 🌸 🎈 💖 ✨ 🎀 🌟 🥂</div>
-      <button class="action-btn gold" onclick="restartExperience()">🔄 Relive the Magic</button>
-    </div>
-  </section>
-
-  <!-- GSAP + anime.js + ScrollReveal -->
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="script.js"></script>
+  <script src="common.js"></script>
+  <script src="index.js"></script>
 </body>
 
 </html>

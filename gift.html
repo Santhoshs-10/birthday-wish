@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Special Gift 🎁</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ======= AUDIO ======= -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" title="Toggle Music">🎵</button>
+
+  <section id="gift-section" style="display: flex !important; min-height: 100vh; justify-content: center;">
+    <div class="section-header">
+      <h2>Your Special Gift 🎁</h2>
+      <p>Click the gift box to open your surprise!</p>
+    </div>
+    <div id="gift-box-container">
+      <div id="gift-box" class="gift-box" onclick="openGift()">
+        <div class="gift-lid">
+          <div class="gift-ribbon-h"></div>
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-bow">
+            <div class="bow-left"></div>
+            <div class="bow-right"></div>
+            <div class="bow-center"></div>
+          </div>
+        </div>
+        <div class="gift-body">
+          <div class="gift-ribbon-h body-ribbon"></div>
+        </div>
+        <div class="gift-sparkles" id="gift-sparkles"></div>
+      </div>
+      <p class="click-hint" id="click-hint">👆 Click to Open!</p>
+      <div id="gift-message" class="gift-message hidden">
+        <div class="gift-msg-inner">
+          <div class="gift-msg-emoji">🎉</div>
+          <h3>You're My Everything!</h3>
+          <p>This gift is wrapped with all the love and warmth I feel for you every single day. You deserve the world and more. Happy Birthday, my dearest! 💖</p>
+        </div>
+      </div>
+    </div>
+    <a href="cake.html" id="next-btn" class="scroll-btn pink hidden">Next Surprise 🎂</a>
+    <canvas id="confetti-canvas" style="position:fixed; inset:0; pointer-events:none; z-index:100;"></canvas>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="common.js"></script>
+  <script src="gift.js"></script>
+</body>
+</html>

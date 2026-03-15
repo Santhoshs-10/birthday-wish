@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make a Wish! 🕯️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ======= AUDIO ======= -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" title="Toggle Music">🎵</button>
+
+  <section id="cake-section" style="display: flex !important; min-height: 100vh; justify-content: center;">
+    <div class="section-header">
+      <h2>Make a Wish! 🕯️</h2>
+      <p>Blow out the candles and make your birthday wish come true!</p>
+    </div>
+    <div id="cake-container">
+      <div id="cake" class="cake">
+        <div class="candles-row" id="candles-row">
+          <div class="candle"><div class="flame" id="f1"></div></div>
+          <div class="candle"><div class="flame" id="f2"></div></div>
+          <div class="candle"><div class="flame" id="f3"></div></div>
+          <div class="candle"><div class="flame" id="f4"></div></div>
+          <div class="candle"><div class="flame" id="f5"></div></div>
+        </div>
+        <div class="cake-top"><div class="cake-deco">🌸 Happy Birthday 🌸</div></div>
+        <div class="cake-middle"></div>
+        <div class="cake-bottom"></div>
+        <div class="cake-plate"></div>
+        <div class="cut-line" id="cut-line"></div>
+      </div>
+    </div>
+    <div class="cake-btns">
+      <button id="blow-btn" class="action-btn" onclick="blowCandles()">💨 Blow the Candles</button>
+      <button id="cut-btn" class="action-btn hidden" onclick="cutCake()">🔪 Cut the Cake</button>
+    </div>
+    <canvas id="cake-confetti" class="confetti-overlay hidden"></canvas>
+    <a href="message.html" class="scroll-btn pink hidden" id="next-msg-btn">Read Your Message 💌</a>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="common.js"></script>
+  <script src="cake.js"></script>
+</body>
+</html>

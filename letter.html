@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Letter For You 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ======= AUDIO ======= -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+  <button id="music-toggle" title="Toggle Music">🎵</button>
+
+  <section id="letter-section" style="display: flex !important; min-height: 100vh; align-items: center; justify-content: center;">
+    <div class="floating-hearts" id="letter-hearts"></div>
+    <div class="letter-wrapper">
+      <div class="letter-card glass" id="letter-card">
+        <div class="letter-header">
+          <span class="letter-stamp">💌</span>
+          <h3>A Letter For You</h3>
+        </div>
+        <div class="letter-body">
+          <p class="letter-greeting">My Dearest,</p>
+          <p>On this special day, I want you to know how incredibly grateful I am to have you in my life. You light up every room you walk into, and your smile makes the whole world brighter. 🌟</p>
+          <p>Every laugh we've shared, every memory we've made — I treasure them all in the deepest corner of my heart. You are my sunshine on cloudy days and my calm in every storm. 🌈</p>
+          <p>May this birthday bring you everything your heart desires — may you be surrounded by love, warmth, and endless happiness. I am so lucky to call you mine. 💖</p>
+          <p>Here's to many more beautiful years ahead. I'll be right by your side through all of them. 🎂✨</p>
+          <p class="letter-closing">Forever Yours,<br /><em>Santhosh 💕</em></p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="final.html" class="scroll-btn pink">Final Surprise ✨</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="common.js"></script>
+  <script src="letter.js"></script>
+</body>
+</html>
