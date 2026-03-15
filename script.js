@@ -54,6 +54,7 @@ window.addEventListener('load', () => tryAutoplay());
 // COUNTDOWN TIMER
 // ============================================
 function unlockContent() {
+  document.documentElement.classList.remove('locked');
   document.body.classList.remove('locked');
   document.body.classList.add('unlocked');
   const btn = document.getElementById('open-surprise-btn');

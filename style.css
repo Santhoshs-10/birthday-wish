@@ -12,9 +12,11 @@ body {
   color: #fff;
   overflow-x: hidden;
 }
-body.locked {
-  overflow-y: hidden;
-  height: 100vh;
+html.locked, body.locked {
+  overflow: hidden !important;
+  height: 100vh !important;
+  width: 100% !important;
+  position: fixed !important;
 }
 
 /* ---- SCROLLBAR ---- */
