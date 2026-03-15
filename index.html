@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="locked">
 
   <!-- ======= AUDIO ======= -->
   <audio id="bg-music" loop>
@@ -37,7 +37,7 @@
           <div class="time-block"><span id="cd-secs">00</span><label>Secs</label></div>
         </div>
       </div>
-      <a href="#gift-section" class="scroll-btn animate-in">Open Your Surprise 🎁</a>
+      <a href="#gift-section" id="open-surprise-btn" class="scroll-btn animate-in hidden">Open Your Surprise 🎁</a>
     </div>
     <div class="floating-emojis">
       <span>🎂</span><span>🎈</span><span>🌸</span><span>✨</span><span>🎊</span><span>💖</span><span>🎀</span><span>🌟</span>
@@ -45,7 +45,7 @@
   </section>
 
   <!-- ======= SECTION 2: GIFT BOX ======= -->
-  <section id="gift-section">
+  <section id="gift-section" class="surprise-section">
     <div class="section-header">
       <h2>Your Special Gift 🎁</h2>
       <p>Click the gift box to open your surprise!</p>
@@ -80,7 +80,7 @@
   </section>
 
   <!-- ======= SECTION 3: CAKE ======= -->
-  <section id="cake-section">
+  <section id="cake-section" class="surprise-section">
     <div class="section-header">
       <h2>Make a Wish! 🕯️</h2>
       <p>Blow out the candles and make your birthday wish come true!</p>
@@ -126,7 +126,7 @@
   </section>
 
   <!-- ======= SECTION 4: TYPING MESSAGE ======= -->
-  <section id="message-section">
+  <section id="message-section" class="surprise-section">
     <div class="floating-hearts" id="floating-hearts"></div>
     <div class="message-card glass">
       <div class="msg-top-deco">💌</div>
@@ -137,7 +137,7 @@
   </section>
 
   <!-- ======= SECTION 5: LOVE LETTER ======= -->
-  <section id="letter-section">
+  <section id="letter-section" class="surprise-section">
     <div class="floating-hearts" id="letter-hearts"></div>
     <div class="letter-wrapper">
       <div class="letter-card glass" id="letter-card">
@@ -170,7 +170,7 @@
   </section>
 
   <!-- ======= SECTION 8: FINAL CELEBRATION ======= -->
-  <section id="final-section">
+  <section id="final-section" class="surprise-section">
     <canvas id="fireworks-canvas"></canvas>
     <div class="final-content">
       <div class="final-emoji">🎂</div>

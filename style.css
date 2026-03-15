@@ -12,6 +12,10 @@ body {
   color: #fff;
   overflow-x: hidden;
 }
+body.locked {
+  overflow-y: hidden;
+  height: 100vh;
+}
 
 /* ---- SCROLLBAR ---- */
 ::-webkit-scrollbar { width: 6px; }
@@ -197,6 +201,14 @@ body {
 .scroll-btn:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 10px 40px rgba(255,80,180,0.7); }
 .scroll-btn.pink { opacity: 1; animation: none; background: linear-gradient(135deg, #ff5e9b, #a855f7); }
 .scroll-btn.gold { background: linear-gradient(135deg, #ffd700, #ff9d00); color: #2a0040; box-shadow: 0 6px 30px rgba(255,200,0,0.5); }
+
+/* Locked state for surprise sections */
+.surprise-section {
+  display: none !important;
+}
+.unlocked .surprise-section {
+  display: block !important;
+}
 
 /* ============================================
    COMMON SECTION STYLES

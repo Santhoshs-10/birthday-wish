@@ -53,6 +53,13 @@ window.addEventListener('load', () => tryAutoplay());
 // ============================================
 // COUNTDOWN TIMER
 // ============================================
+function unlockContent() {
+  document.body.classList.remove('locked');
+  document.body.classList.add('unlocked');
+  const btn = document.getElementById('open-surprise-btn');
+  if (btn) btn.classList.remove('hidden');
+}
+
 function updateCountdown() {
   const now = new Date();
   let target = new Date(CONFIG.birthdayDate);
@@ -71,6 +78,9 @@ function updateCountdown() {
   
   // If it's currently the birthday (now is between target and endOfBirthday)
   if (now >= target && now <= endOfBirthday) {
+    // Birthday is active! Unlock content
+    unlockContent();
+    
     // Birthday is active! We can show all zeros or a special message
     const setZero = (id) => {
       const el = document.getElementById(id);
