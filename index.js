@@ -21,7 +21,7 @@ function unlockContent() {
   isUnlocked = true;
   const btn = document.getElementById('open-surprise-btn');
   if (btn) {
-    btn.style.opacity = "1";
+    btn.classList.remove('locked');
     btn.style.filter = "none";
   }
 }
@@ -30,6 +30,9 @@ function unlockContent() {
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('open-surprise-btn');
   if (btn) {
+    // Start as locked if countdown hasn't ended
+    btn.classList.add('locked');
+    
     btn.addEventListener('click', (e) => {
       if (!isUnlocked) {
         e.preventDefault();
