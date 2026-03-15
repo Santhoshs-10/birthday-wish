@@ -24,13 +24,33 @@ function initMusic() {
   
   if (!bgMusic || !musicBtn) return;
 
-  // Restore music state from localStorage if possible
+  // Restore music state from localStorage
   const wasPlaying = localStorage.getItem('musicPlaying') === 'true';
+  const savedTime = localStorage.getItem('musicTime');
+  
   bgMusic.volume = 0.3;
+
+  if (savedTime) {
+    bgMusic.currentTime = parseFloat(savedTime);
+  }
 
   if (wasPlaying) {
     playMusic();
   }
+
+  // Periodically save current time to localStorage
+  setInterval(() => {
+    if (bgMusic && !bgMusic.paused) {
+      localStorage.setItem('musicTime', bgMusic.currentTime);
+    }
+  }, 500);
+
+  // Save on navigation
+  window.addEventListener('beforeunload', () => {
+    if (bgMusic) {
+      localStorage.setItem('musicTime', bgMusic.currentTime);
+    }
+  });
 
   musicBtn.addEventListener('click', () => {
     if (musicPlaying) {
