@@ -2,10 +2,42 @@
 // INDEX.JS - Landing Page Logic
 // ============================================
 
-function unlockContent() {
-  const btn = document.getElementById('open-surprise-btn');
-  if (btn) btn.classList.remove('hidden');
+let isUnlocked = false;
+
+function showToast(message) {
+  const container = document.getElementById('toast-container');
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = message;
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add('fade-out');
+    setTimeout(() => toast.remove(), 400);
+  }, 3000);
 }
+
+function unlockContent() {
+  isUnlocked = true;
+  const btn = document.getElementById('open-surprise-btn');
+  if (btn) {
+    btn.style.opacity = "1";
+    btn.style.filter = "none";
+  }
+}
+
+// Handle gated click
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('open-surprise-btn');
+  if (btn) {
+    btn.addEventListener('click', (e) => {
+      if (!isUnlocked) {
+        e.preventDefault();
+        showToast("Wait for countdown to end darling! ❤️");
+      }
+    });
+  }
+});
 
 function updateCountdown() {
   const now = new Date();
